@@ -68,3 +68,5 @@ print(nb_nombre_etudiants_prof(associations))
 ('Victor', 'Carpentier'): 10, 
 ('Élise', 'Laurent'): 9}
 """
+
+db.close()
