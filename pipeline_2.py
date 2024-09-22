@@ -17,12 +17,12 @@ def generate_json(data):
             amount_str = parts[2].replace('€', '').strip()
 
             try:
-                amount = float(amount_str)  # Convertit le montant en float
+                amount = float(amount_str)
                 totals[name] = totals.get(name, 0) + amount
             except ValueError:
-                continue  # Ignore les lignes avec des montants invalides
+                continue
 
-    print("Totaux calculés :", totals)  # Imprime les totaux pour débogage
+    print("Totaux calculés :", totals)
     return [{'name': name, 'total_sent': total} for name, total in totals.items()]
 
 def save_result(path: str, result: list):
@@ -34,14 +34,12 @@ def save_result(path: str, result: list):
     with open(full_path, 'w') as json_file:
         json.dump(result, json_file, indent=4)
 
-# Exemple d'utilisation
 data_path = r'text.txt'
 sample_data = load_sample(data_path)
-print("Données chargées :", sample_data)  # Imprime les données chargées pour débogage
+print("Données chargées :", sample_data)
 json_result = generate_json(sample_data)
 save_path = r'.\results'
 
-# Vérifie et crée le dossier results si nécessaire
 if not os.path.exists(save_path):
     os.makedirs(save_path)
 
