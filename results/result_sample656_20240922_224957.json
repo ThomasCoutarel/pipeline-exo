@@ -1,0 +1,10 @@
+[
+    {
+        "name": "john",
+        "total_sent": 4000.0
+    },
+    {
+        "name": "alice",
+        "total_sent": 1000.0
+    }
+]
