@@ -42,7 +42,8 @@ def associations():
                 associations[enseignant_key] = []
             associations[enseignant_key].append((etudiant[1], etudiant[2], etudiant[7] ))
     return associations
-
+associations=associations()
+print(associations)
 """
 associations=associations()
 print(associations)
@@ -60,6 +61,7 @@ def nb_nombre_etudiants_prof(associations):
             nb_nombre_etudiants_prof[enseignant_key] = len(etudiants)
     return nb_nombre_etudiants_prof
 
+print(nb_nombre_etudiants_prof(associations))
 
 """
 associations=associations()
